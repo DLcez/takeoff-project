@@ -11,6 +11,21 @@ body {
     width: 100%;
     z-index: -1;
 }
+.botao-whatsapp {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.botao-whatsapp:hover {
+    background-color: #1EBEA5;
+}
+
 
 .informacoes {
     display: none;
@@ -38,8 +53,8 @@ body {
 }
 
 @font-face {
-    font-family: "GOT";
-    src: url(../fontes/GOT.ttf);
+    font-family: "Figtree-VariableFont_wght";
+    src: url(../fontes/Figtree-VariableFont_wght.ttf);
 }
 
 .informacoes.descricao {
