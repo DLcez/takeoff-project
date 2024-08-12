@@ -11,19 +11,43 @@ body {
     width: 100%;
     z-index: -1;
 }
-.botao-whatsapp {
-    display: inline-block;
-    background-color: #25D366;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
+
+/* Estilos para a seção de dados da empresa */
+.dados-empresa {
+    background-color: rgba(173,216,230,0.8); /* Cor de fundo clara para destacar a seção */
+    padding: 20px; /* Espaçamento interno */
+    margin: 20px 0; /* Margem superior e inferior */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+    text-align: center; /* Alinhamento centralizado do texto */
 }
 
-.botao-whatsapp:hover {
-    background-color: #1EBEA5;
+.dados-empresa h2 {
+    font-size: 1.8em; /* Tamanho da fonte do título */
+    color: #333; /* Cor do texto do título */
+    margin-bottom: 10px; /* Margem inferior */
+}
+
+.dados-empresa p {
+    font-size: 1em; /* Tamanho da fonte do texto */
+    color: #666; /* Cor do texto */
+    line-height: 1.6; /* Altura da linha para melhor leitura */
+    margin-bottom: 15px; /* Margem inferior */
+}
+
+.dados-empresa a.botao-whatsapp {
+    display: inline-block;
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    font-size: 1em; /* Tamanho da fonte do botão */
+    color: #fff; /* Cor do texto do botão */
+    background-color: #25d366; /* Cor de fundo do botão */
+    border-radius: 5px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove o sublinhado do link */
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+.dados-empresa a.botao-whatsapp:hover {
+    background-color: #128c7e; /* Cor de fundo do botão ao passar o mouse */
 }
 
 
