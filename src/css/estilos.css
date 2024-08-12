@@ -1,3 +1,10 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Remove a rolagem do body */
+}
+
 body {
     font-family: "Porppins", sans-serif;
     max-width: 1280px;
@@ -12,28 +19,46 @@ body {
     z-index: -1;
 }
 
-/* Estilos para a seção de dados da empresa */
+/* Define a visibilidade inicial */
 .dados-empresa {
-    background-color: rgba(173,216,230,0.8); /* Cor de fundo clara para destacar a seção */
-    padding: 20px; /* Espaçamento interno */
-    margin: 20px 0; /* Margem superior e inferior */
+    display: block; /* Visível na primeira página */
+    position: center; /* Permite sobrepor o carrossel */
+    top: 10px; /* Ajuste conforme necessário */
+    left: 10px; /* Ajuste conforme necessário */
+    z-index: 10; /* Garantir que a seção esteja acima do carrossel */
+}
+
+/* Oculta a seção em todas as páginas do carrossel, exceto a primeira */
+.dados-empresa.hide {
+    display: none;
+}
+
+
+.dados-empresa {
+    background-color: rgba(0, 0, 0, 0); /* Totalmente transparente */
+    padding: 10px; /* Espaçamento interno */
+    margin: 10px; /* Margem superior e inferior */
     border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
     text-align: center; /* Alinhamento centralizado do texto */
 }
 
-.dados-empresa h2 {
-    font-size: 1.8em; /* Tamanho da fonte do título */
-    color: #333; /* Cor do texto do título */
-    margin-bottom: 10px; /* Margem inferior */
+.dados-empresa h2,
+.dados-empresa p {
+    color: #ffffff; /* Cor do texto branco */
+    font-weight: bold; /* Texto em negrito */
 }
 
 .dados-empresa p {
     font-size: 1em; /* Tamanho da fonte do texto */
-    color: #666; /* Cor do texto */
     line-height: 1.6; /* Altura da linha para melhor leitura */
     margin-bottom: 15px; /* Margem inferior */
+    text-align: center; /* Centraliza o texto */
+    max-width: 90%; /* Limita a largura máxima do parágrafo */
+    margin-left: auto; /* Ajusta a margem esquerda automática para centralização */
+    margin-right: auto; /* Ajusta a margem direita automática para centralização */
 }
+
 
 .dados-empresa a.botao-whatsapp {
     display: inline-block;

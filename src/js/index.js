@@ -67,3 +67,34 @@ function desativarBotaoSelecionado() {
     botaoSelecionado.classList.remove("selecionado");
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    const informacoes = document.querySelectorAll('.informacoes');
+    const dadosEmpresa = document.querySelector('.dados-empresa');
+    let currentIndex = 0;
+
+    function showPage(index) {
+        informacoes.forEach((info, i) => {
+            info.classList.toggle('ativa', i === index);
+        });
+
+        // Oculta ou mostra a seção de dados da empresa
+        if (index === 0) {
+            dadosEmpresa.classList.remove('hide');
+        } else {
+            dadosEmpresa.classList.add('hide');
+        }
+    }
+
+    // Adiciona event listeners para navegação do carrossel, se houver botões de navegação
+    document.querySelectorAll('.botoes-carrosel .botao').forEach((button, i) => {
+        button.addEventListener('click', () => {
+            currentIndex = i;
+            showPage(currentIndex);
+        });
+    });
+
+    // Mostra a primeira página ao carregar a página
+    showPage(currentIndex);
+});
+
+
